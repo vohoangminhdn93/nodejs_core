@@ -1,0 +1,18 @@
+extends ../layout
+block content
+  .row
+    .col-md-6
+      .card
+        .card-body
+          form(action='/login', method='POST')
+            .form-group
+              label(for='exampleInputEmail1') Username
+              input#exampleInputEmail1.form-control(type='text', value='admin', name='username', aria-describedby='emailHelp', placeholder='Enter username')
+              small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
+            .form-group
+              label(for='exampleInputPassword1') Password
+              input#exampleInputPassword1.form-control(type='password', value='asdf1234', placeholder='Password', name='password')
+            .form-check
+              input#exampleCheck1.form-check-input(type='checkbox')
+              label.form-check-label(for='exampleCheck1') Check me out
+            button.btn.btn-primary(type='submit') Submit
